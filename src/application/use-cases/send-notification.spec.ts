@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { InMemoryNotificationRepository } from '../../../tests/repositories/notification';
+import { InMemoryNotificationRepository } from '@tests/repositories/notification';
 import { Notification } from '../entities/notification';
 import { SendNotification } from './send-notification';
 

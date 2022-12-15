@@ -8,6 +8,7 @@ interface INotification {
   readtAt?: Date | null;
   createdAt: Date;
   recipientId: string;
+  canceledAt?: Date;
 }
 
 export class Notification {
@@ -17,6 +18,7 @@ export class Notification {
   readtAt?: Date | null;
   createdAt: Date;
   recipientId: string;
+  canceledAt?: Date;
 
   constructor({
     content,
@@ -24,6 +26,7 @@ export class Notification {
     readtAt,
     createdAt = new Date(),
     recipientId,
+    canceledAt,
   }: Replace<INotification, { createdAt?: Date }>) {
     this.id = randomUUID();
     this.content = content;
@@ -35,5 +38,10 @@ export class Notification {
 
     this.createdAt = createdAt;
     this.recipientId = recipientId;
+    this.canceledAt = canceledAt;
+  }
+
+  public cancel() {
+    this.canceledAt = new Date();
   }
 }

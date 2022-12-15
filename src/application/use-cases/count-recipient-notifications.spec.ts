@@ -1,24 +1,10 @@
-import { Content } from '@application/validators/content';
-import { faker } from '@faker-js/faker';
+import { makeNotification } from '@tests/factories/notification';
 import { InMemoryNotificationRepository } from '@tests/repositories/notification';
-import { Notification } from '../entities/notification';
 import { CountRecipientNotifications } from './count-recipient-notifications';
 
-describe('Count Recipient Notification', () => {
+describe('Count Recipient Notifications', () => {
   it('should be able to count recipient notifications', async () => {
-    const content = faker.lorem.sentence();
-    const notifications = [
-      new Notification({
-        category: faker.lorem.word(),
-        content: new Content(content),
-        recipientId: faker.datatype.uuid(),
-      }),
-      new Notification({
-        category: faker.lorem.word(),
-        content: new Content(content),
-        recipientId: faker.datatype.uuid(),
-      }),
-    ];
+    const notifications = [makeNotification(), makeNotification()];
     const [notification] = notifications;
 
     const notificationRepository = new InMemoryNotificationRepository(

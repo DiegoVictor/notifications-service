@@ -2,7 +2,7 @@ import { randomUUID } from 'crypto';
 import { Replace } from '@helpers/replace';
 import { Content } from '../validators/content';
 
-interface INotification {
+export interface INotification {
   content: Content;
   category: string;
   readtAt?: Date | null;

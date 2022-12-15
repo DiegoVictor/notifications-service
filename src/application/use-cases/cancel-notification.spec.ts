@@ -1,18 +1,12 @@
 import { NotificationNotFound } from '@application/errors/notification';
-import { Content } from '@application/validators/content';
 import { faker } from '@faker-js/faker';
 import { InMemoryNotificationRepository } from '@tests/repositories/notification';
-import { Notification } from '../entities/notification';
 import { CancelNotification } from './cancel-notification';
+import { makeNotification } from '@tests/factories/notification';
 
 describe('Cancel Notification', () => {
   it('should be able to cancel a notification', async () => {
-    const content = faker.lorem.sentence();
-    const notification = new Notification({
-      category: faker.lorem.word(),
-      content: new Content(content),
-      recipientId: faker.datatype.uuid(),
-    });
+    const notification = makeNotification();
     const payload = {
       notificationId: notification.id,
     };

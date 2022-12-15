@@ -44,4 +44,12 @@ export class Notification {
   public cancel() {
     this.canceledAt = new Date();
   }
+
+  public read() {
+    this.readtAt = new Date();
+  }
+
+  public unread() {
+    this.readtAt = null;
+  }
 }

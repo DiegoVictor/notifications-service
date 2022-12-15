@@ -3,9 +3,10 @@ import { Replace } from '@helpers/replace';
 import { Content } from '../validators/content';
 
 export interface INotification {
+  id?: string;
   content: Content;
   category: string;
-  readtAt?: Date | null;
+  readAt?: Date | null;
   createdAt: Date;
   recipientId: string;
   canceledAt?: Date;
@@ -15,25 +16,26 @@ export class Notification {
   id: string;
   content: Content;
   category: string;
-  readtAt?: Date | null;
+  readAt?: Date | null;
   createdAt: Date;
   recipientId: string;
   canceledAt?: Date;
 
   constructor({
+    id = randomUUID(),
     content,
     category,
-    readtAt,
+    readAt,
     createdAt = new Date(),
     recipientId,
     canceledAt,
   }: Replace<INotification, { createdAt?: Date }>) {
-    this.id = randomUUID();
+    this.id = id;
     this.content = content;
     this.category = category;
 
-    if (readtAt) {
-      this.readtAt = readtAt;
+    if (readAt) {
+      this.readAt = readAt;
     }
 
     this.createdAt = createdAt;
@@ -46,10 +48,10 @@ export class Notification {
   }
 
   public read() {
-    this.readtAt = new Date();
+    this.readAt = new Date();
   }
 
   public unread() {
-    this.readtAt = null;
+    this.readAt = null;
   }
 }

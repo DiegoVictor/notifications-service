@@ -1,6 +1,5 @@
 import { faker } from '@faker-js/faker';
 import { makeNotification } from '@tests/factories/notification';
-import { Content } from '../validators/content';
 import { Notification } from './notification';
 
 describe('Notification', () => {
@@ -23,20 +22,20 @@ describe('Notification', () => {
   it('should be able to read a notification', async () => {
     const notification = makeNotification();
 
-    expect(notification.readtAt).toBe(undefined);
+    expect(notification.readAt).toBe(undefined);
 
     notification.read();
 
-    expect(notification.readtAt).toStrictEqual(expect.any(Date));
+    expect(notification.readAt).toStrictEqual(expect.any(Date));
   });
 
   it('should be able to unread a notification', async () => {
     const notification = makeNotification({
-      readtAt: faker.date.past(),
+      readAt: faker.date.past(),
     });
 
     notification.unread();
 
-    expect(notification.readtAt).toStrictEqual(null);
+    expect(notification.readAt).toStrictEqual(null);
   });
 });

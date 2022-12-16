@@ -18,7 +18,7 @@ describe('Read Notification', () => {
 
     await service.execute(payload);
 
-    expect(notificationRepository.notifications.at(0).readtAt).toStrictEqual(
+    expect(notificationRepository.notifications.at(0).readAt).toStrictEqual(
       expect.any(Date),
     );
   });

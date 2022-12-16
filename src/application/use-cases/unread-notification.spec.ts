@@ -6,7 +6,7 @@ import { UnreadNotification } from './unread-notification';
 
 describe('Unread Notification', () => {
   it('should be able to unread a notification', async () => {
-    const notification = makeNotification({ readtAt: faker.date.past() });
+    const notification = makeNotification({ readAt: faker.date.past() });
     const payload = {
       notificationId: notification.id,
     };
@@ -18,7 +18,7 @@ describe('Unread Notification', () => {
 
     await service.execute(payload);
 
-    expect(notificationRepository.notifications.at(0).readtAt).toBeNull();
+    expect(notificationRepository.notifications.at(0).readAt).toBeNull();
   });
 
   it('should not be able to unread a non existing notification', async () => {

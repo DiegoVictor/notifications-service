@@ -9,11 +9,15 @@ interface IRequest {
   recipientId: string;
 }
 
+interface IResponse {
+  notification: Notification;
+}
+
 @Injectable()
 export class SendNotification {
   constructor(private notificationRepository: NotificationRepository) {}
 
-  async execute(request: IRequest): Promise<Notification> {
+  async execute(request: IRequest): Promise<IResponse> {
     const { content, category, recipientId } = request;
 
     const notification = new Notification({
@@ -24,6 +28,6 @@ export class SendNotification {
 
     await this.notificationRepository.create(notification);
 
-    return notification;
+    return { notification };
   }
 }

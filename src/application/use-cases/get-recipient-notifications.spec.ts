@@ -21,7 +21,7 @@ describe('Get Recipient Notifications', () => {
     });
 
     notifications.forEach((notification) => {
-      expect(response).toContainEqual(notification);
+      expect(response.notifications).toContainEqual(notification);
     });
   });
 });

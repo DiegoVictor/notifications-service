@@ -15,7 +15,7 @@ describe('Send Notification', () => {
     const notificationRepository = new InMemoryNotificationRepository();
     const service = new SendNotification(notificationRepository);
 
-    const notification = await service.execute(payload);
+    const { notification } = await service.execute(payload);
 
     expect(notification).toBeInstanceOf(Notification);
     expect(notificationRepository.notifications).toEqual([notification]);

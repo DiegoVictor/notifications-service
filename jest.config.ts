@@ -33,6 +33,7 @@ const config: Config = {
     'src/helpers',
     'src/app.module.ts',
     'src/main.ts',
+    'infra',
   ],
 
   // Indicates which provider should be used to instrument code for coverage

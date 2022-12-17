@@ -1,6 +1,6 @@
-import { NotificationRepository } from '../repositories/notification';
 import { Injectable } from '@nestjs/common';
-import { NotificationNotFound } from '@application/errors/notification';
+import { NotificationRepository } from '../repositories/notification.repository';
+import { NotificationNotFound } from '@application/errors/notification.errors';
 
 interface IRequest {
   notificationId: string;

@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { SendNotification } from '@application/use-cases/send-notification';
-import { CreateNotification } from '../dtos/notification.dto';
-import { NotificationViewModel } from '../view-models/notification';
+import { CreateNotificationDto } from '../dtos/notification.dto';
+import { NotificationViewModel } from '../view-models/notification.view-model';
 import { CancelNotification } from '@application/use-cases/cancel-notification';
 import { CountRecipientNotifications } from '@application/use-cases/count-recipient-notifications';
 import { ReadNotification } from '@application/use-cases/read-notification';
@@ -59,7 +59,7 @@ export class NotificationsController {
   }
 
   @Post()
-  async create(@Body() body: CreateNotification) {
+  async create(@Body() body: CreateNotificationDto) {
     const { content, category, recipientId } = body;
 
     const { notification } = await this.sendNotification.execute({

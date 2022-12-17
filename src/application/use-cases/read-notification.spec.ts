@@ -1,5 +1,5 @@
-import { NotificationNotFound } from '@application/errors/notification';
 import { faker } from '@faker-js/faker';
+import { NotificationNotFound } from '@application/errors/notification.errors';
 import { InMemoryNotificationRepository } from '@tests/repositories/notification';
 import { makeNotification } from '@tests/factories/notification';
 import { ReadNotification } from './read-notification';

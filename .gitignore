@@ -36,3 +36,4 @@ tests/coverage
 !.vscode/extensions.json
 
 *.db
+.env

@@ -3,7 +3,6 @@ import { Notification } from '@application/entities/notification';
 import { NotificationRepository } from '@application/repositories/notification.repository';
 import { PrismaService } from '../prisma.service';
 import { PrismaNotificationMapper } from '../mappers/notification.mapper';
-import { Content } from '@application/validators/content';
 
 @Injectable()
 export class PrismaNotificationRepository implements NotificationRepository {
@@ -14,10 +13,11 @@ export class PrismaNotificationRepository implements NotificationRepository {
       where: { id },
     });
 
-    return new Notification({
-      ...record,
-      content: new Content(record.content),
-    });
+    if (record) {
+      return PrismaNotificationMapper.toDomain(record);
+    }
+
+    return null;
   }
 
   async findManyByRecipientId(recipientId: string): Promise<Notification[]> {

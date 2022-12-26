@@ -8,6 +8,9 @@ export class KafkaConsumerService
 {
   constructor() {
     super({
+      client: {
+        brokers: [process.env.KAFKA_BROKER],
+      },
     });
   }
 

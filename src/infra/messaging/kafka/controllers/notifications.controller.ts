@@ -12,7 +12,7 @@ interface IMessage {
 export class NotificationsController {
   constructor(private sendNotification: SendNotification) {}
 
-  @EventPattern('notifications.send-notification')
+  @EventPattern(process.env.KAFKA_TOPIC)
   async handleSendNotification(@Payload() message: IMessage) {
     await this.sendNotification.execute(message);
   }

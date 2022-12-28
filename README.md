@@ -7,3 +7,6 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/DiegoVictor/notifications-service/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Notification%20Service&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fnotifications-service%2Fmain%2FInsomnia_2022-12-15.json)
+
+Small microservice to handle notifications, it allows you to send and cancel notifications, mark as read/unread and get the recipient notifications list.
+

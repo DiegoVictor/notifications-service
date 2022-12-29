@@ -10,3 +10,12 @@
 
 Small microservice to handle notifications, it allows you to send and cancel notifications, mark as read/unread and get the recipient notifications list.
 
+## Table of Contents
+* [Installing](#installing)
+  * [Configuring](#configuring)
+* [Usage](#usage)
+  * [Routes](#routes)
+    * [Requests](#requests)
+* [Running the tests](#running-the-tests)
+  * [Coverage report](#coverage-report)
+

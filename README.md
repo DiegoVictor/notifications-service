@@ -19,3 +19,13 @@ Small microservice to handle notifications, it allows you to send and cancel not
 * [Running the tests](#running-the-tests)
   * [Coverage report](#coverage-report)
 
+# Installing
+Easy peasy lemon squeezy:
+```
+$ yarn
+```
+Or:
+```
+$ npm install
+```
+> Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.

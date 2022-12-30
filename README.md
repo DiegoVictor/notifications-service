@@ -29,3 +29,11 @@ Or:
 $ npm install
 ```
 > Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.
+
+## Configuring
+The application is using just one database: [SQLite](https://www.sqlite.org/index.html). It stores all the application's data. You just need to remember to run the migrations:
+```
+$ npx prisma migrate dev
+```
+> See more information on [Prisma Migrate](https://www.prisma.io/docs/concepts/components/prisma-migrate).
+

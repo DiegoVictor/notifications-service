@@ -14,4 +14,25 @@
     }
   ],
   "paths": {
+  },
+  "components": {
+    "schemas": {
+      "Notification": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "recipientId": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        }
+      }
+    }
   }
+}

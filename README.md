@@ -37,3 +37,12 @@ $ npx prisma migrate dev
 ```
 > See more information on [Prisma Migrate](https://www.prisma.io/docs/concepts/components/prisma-migrate).
 
+# Usage
+To start up the app run:
+```
+$ yarn start:dev
+```
+Or:
+```
+npm run start:dev
+```

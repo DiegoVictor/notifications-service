@@ -69,3 +69,15 @@ Request body:
 }
 ```
 
+# Running the tests
+[Jest](https://jestjs.io/) was the choice to test the app, to run:
+```
+$ yarn test
+```
+Or:
+```
+$ npm run test
+```
+
+## Coverage report
+You can see the coverage report inside `tests/coverage`. They are automatically created after the tests run.

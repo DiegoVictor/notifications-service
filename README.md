@@ -46,3 +46,26 @@ Or:
 ```
 npm run start:dev
 ```
+
+## Routes
+|route|HTTP Method|params|description
+|:---|:---:|:---:|:---:
+|`/notifications`|POST|Body with notification `content`, `category` and `recipientId`.|Create a new notification.
+|`/notifications/recipient/:id`|GET|`:id` of the recipient.|Lists recipient notifications.
+|`/notifications/recipient/:id/count`|GET|`:id` of the recipient.|Count recipient notifications.
+|`/notifications/:id/cancel`|PATCH|`:id` of the notification.|Set notification as canceled.
+|`/notifications/:id/read`|PATCH|`:id` of the notification.|Set notification as read.
+|`/notifications/:id/unread`|PATCH|`:id` of the notification.|Set notification as unread.
+
+### Requests
+* `POST /notifications`
+
+Request body:
+```json
+{
+  "content": "Lorem ipsum dolor sit amet",
+  "category": "example",
+  "recipientId": "69c9a4f1-adbb-44c7-97ca-eac8eee9f029"
+}
+```
+

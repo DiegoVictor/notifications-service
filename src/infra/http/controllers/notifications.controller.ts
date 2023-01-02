@@ -7,6 +7,7 @@ import { CountRecipientNotifications } from '@application/use-cases/count-recipi
 import { ReadNotification } from '@application/use-cases/read-notification';
 import { UnreadNotification } from '@application/use-cases/unread-notification';
 import { GetRecipientNotifications } from '@application/use-cases/get-recipient-notifications';
+import { NotificationExceptionHandler } from '../exceptions/notitication.exception';
 
 @Controller('notifications')
 export class NotificationsController {
@@ -21,23 +22,35 @@ export class NotificationsController {
 
   @Patch('/:id/cancel')
   async cancel(@Param('id') id: string) {
-    await this.cancelNotification.execute({
-      notificationId: id,
-    });
+    try {
+      await this.cancelNotification.execute({
+        notificationId: id,
+      });
+    } catch (err) {
+      NotificationExceptionHandler.handle(err);
+    }
   }
 
   @Patch('/:id/read')
   async read(@Param('id') id: string) {
-    await this.readNotification.execute({
-      notificationId: id,
-    });
+    try {
+      await this.readNotification.execute({
+        notificationId: id,
+      });
+    } catch (err) {
+      NotificationExceptionHandler.handle(err);
+    }
   }
 
   @Patch('/:id/unread')
   async unread(@Param('id') id: string) {
-    await this.unreadNotification.execute({
-      notificationId: id,
-    });
+    try {
+      await this.unreadNotification.execute({
+        notificationId: id,
+      });
+    } catch (err) {
+      NotificationExceptionHandler.handle(err);
+    }
   }
 
   @Get('/recipient/:id/count')

@@ -14,6 +14,56 @@
     }
   ],
   "paths": {
+    "/notifications": {
+      "post": {
+        "tags": ["notifications"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "title": "Notification",
+                "properties": {
+                  "recipientId": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                },
+                "required": ["recipientId", "content", "category"]
+              },
+              "example": {
+                "recipientId": "f42d512a-769a-47e4-8caf-e31f727ebb8a",
+                "content": "New friendship request",
+                "category": "Social"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Return the notification created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Notification"
+                },
+                "example": {
+                  "id": "1bb8945c-a512-43b1-938d-3cd5f9471f5f",
+                  "content": "New friendship request",
+                  "category": "Social",
+                  "recipientId": "f42d512a-769a-47e4-8caf-e31f727ebb8a"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "components": {
     "schemas": {

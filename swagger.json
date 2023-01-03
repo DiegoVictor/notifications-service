@@ -66,6 +66,49 @@
           }
         }
       }
+    },
+    "/notifications/recipient/{id}": {
+      "get": {
+        "tags": ["notifications"],
+        "summary": "Get recipient notifications",
+        "description": "Get recipient notifications",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "f42d512a-769a-47e4-8caf-e31f727ebb8a"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Return recipient's notifications",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "title": "Notifications",
+                  "items": {
+                    "$ref": "#/components/schemas/Notification"
+                  }
+                },
+                "example": [
+                  {
+                    "id": "1bb8945c-a512-43b1-938d-3cd5f9471f5f",
+                    "content": "New friendship request",
+                    "category": "Social",
+                    "recipientId": "f42d512a-769a-47e4-8caf-e31f727ebb8a",
+                    "canceledAt": null
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {

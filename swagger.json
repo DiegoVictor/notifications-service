@@ -83,8 +83,12 @@
           },
           "category": {
             "type": "string"
+          },
+          "canceledAt": {
+            "type": "string"
           }
-        }
+        },
+        "required": ["id", "recipientId", "content", "category"]
       }
     }
   }

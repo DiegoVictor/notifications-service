@@ -2,6 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Notifications Service",
+    "description": "Project developed during the Node.js Ignite Lab 4.0",
     "version": "1.0",
     "license": {
       "name": "MIT",

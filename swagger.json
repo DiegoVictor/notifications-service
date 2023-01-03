@@ -17,6 +17,8 @@
     "/notifications": {
       "post": {
         "tags": ["notifications"],
+        "summary": "Create new notifications",
+        "description": "Create new notifications",
         "requestBody": {
           "content": {
             "application/json": {

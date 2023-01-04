@@ -170,6 +170,18 @@
           }
         },
         "required": ["id", "recipientId", "content", "category"]
+      },
+      "Error": {
+        "properties": {
+          "status": {
+            "type": "number"
+          },
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+    },
       }
     }
   }

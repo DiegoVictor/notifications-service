@@ -182,6 +182,20 @@
         }
       }
     },
+    "responses": {
+      "404": {
+        "description": "The provided id doesn't reference an existing notification in the database",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            },
+            "example": {
+              "status": 404,
+              "error": "Notification Not Found"
+            }
+          }
+        }
       }
     }
   }

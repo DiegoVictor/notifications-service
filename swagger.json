@@ -69,7 +69,7 @@
     },
     "/notifications/recipient/{id}": {
       "get": {
-        "tags": ["notifications"],
+        "tags": ["recipients"],
         "summary": "Get recipient notifications",
         "description": "Get recipient notifications",
         "parameters": [
@@ -112,7 +112,7 @@
     },
     "/notifications/recipient/{id}/count": {
       "get": {
-        "tags": ["notifications"],
+        "tags": ["recipients"],
         "summary": "Count recipient's notifications",
         "description": "Count recipient's notifications",
         "parameters": [

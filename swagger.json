@@ -109,6 +109,44 @@
           }
         }
       }
+    },
+    "/notifications/recipient/{id}/count": {
+      "get": {
+        "tags": ["notifications"],
+        "summary": "Count recipient's notifications",
+        "description": "Count recipient's notifications",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "f42d512a-769a-47e4-8caf-e31f727ebb8a"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Count recipient's notifications",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "example": {
+                  "count": 1
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {

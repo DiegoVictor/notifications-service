@@ -173,6 +173,32 @@
           }
         }
       }
+    },
+    "/notifications/{id}/read": {
+      "patch": {
+        "tags": ["notifications"],
+        "summary": "Mark notification as read",
+        "description": "Mark notification as read",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1bb8945c-a512-43b1-938d-3cd5f9471f5f"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Notification set as read successfully"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
     }
   },
   "components": {

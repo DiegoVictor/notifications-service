@@ -1,4 +1,4 @@
-# [API] Notifications Service
+# Notifications Service
 ![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/notifications-service?style=flat-square&logo=circleci)
 ![NestJS](https://img.shields.io/badge/nestjs-9.2.1-E0234E?style=flat-square&logo=nestjs)
 [![eslint](https://img.shields.io/badge/eslint-8.29.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)

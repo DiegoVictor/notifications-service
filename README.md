@@ -15,6 +15,7 @@ Small microservice to handle notifications, it allows you to send and cancel not
   * [Configuring](#configuring)
     * [SQLite](#sqlite)
     * [Kafka](#kafka)
+      * [Script](#script)
 * [Usage](#usage)
   * [Routes](#routes)
     * [Requests](#requests)
@@ -54,6 +55,12 @@ Kafka is used to receive notifications through events:
 $ docker-compose up -d zookeeper kafka
 ```
 > Remember to run the application manually, see [Usage](#usage)
+
+#### Script
+The repository is shipped with a script to help you to send random notifications to Kafka:
+```
+$ node scripts/send-message.js
+```
 
 # Usage
 To start up the app run:

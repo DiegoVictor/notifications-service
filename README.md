@@ -13,6 +13,8 @@ Small microservice to handle notifications, it allows you to send and cancel not
 ## Table of Contents
 * [Installing](#installing)
   * [Configuring](#configuring)
+    * [SQLite](#sqlite)
+    * [Kafka](#kafka)
 * [Usage](#usage)
   * [Routes](#routes)
     * [Requests](#requests)
@@ -31,11 +33,27 @@ $ npm install
 > Was installed and configured the [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/) to keep the code clean and patterned.
 
 ## Configuring
-The application is using just one database: [SQLite](https://www.sqlite.org/index.html). It stores all the application's data. You just need to remember to run the migrations:
+The application is using just one database: [SQLite](https://www.sqlite.org/index.html). For the fastest setup is recommended to use [docker-compose](https://docs.docker.com/compose/), you just need to up all services:
+```
+$ docker-compose up -d
+```
+
+Or follow the instructions in [SQLite](#sqlite) and [Kafka](#kafka) sections.
+
+### SQLite
+It stores all the application's data. You just need to remember to run the migrations:
 ```
 $ npx prisma migrate dev
 ```
 > See more information on [Prisma Migrate](https://www.prisma.io/docs/concepts/components/prisma-migrate).
+
+
+### Kafka
+Kafka is used to receive notifications through events:
+```
+$ docker-compose up -d zookeeper kafka
+```
+> Remember to run the application manually, see [Usage](#usage)
 
 # Usage
 To start up the app run:

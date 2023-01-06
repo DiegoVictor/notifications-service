@@ -16,6 +16,7 @@ Small microservice to handle notifications, it allows you to send and cancel not
     * [SQLite](#sqlite)
     * [Kafka](#kafka)
       * [Script](#script)
+    * [.env](#env)
 * [Usage](#usage)
   * [Routes](#routes)
     * [Requests](#requests)
@@ -61,6 +62,15 @@ The repository is shipped with a script to help you to send random notifications
 ```
 $ node scripts/send-message.js
 ```
+
+### .env
+In this file you may configure the path to the SQLite database file and Kafka settings. Rename the `.env.example` in the root directory to `.env` then just update with your settings.
+
+|key|description|default
+|---|---|---
+|DATABASE_URL|Path to SQLite file.|`file:./dev.db`
+|KAFKA_TOPIC|Name of the Kafka's topic.|`notifications.send-notification`
+|KAFKA_BROKER|Kafka Broker URL.|`localhost:9092`
 
 # Usage
 To start up the app run:

@@ -4,7 +4,7 @@
 [![eslint](https://img.shields.io/badge/eslint-8.29.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![jest](https://img.shields.io/badge/jest-28.1.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/notifications-service?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/notifications-service)
-[![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/DiegoVictor/notifications-service/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/notifications-service/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Notification%20Service&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Fnotifications-service%2Fmain%2FInsomnia_2022-12-15.json)
 

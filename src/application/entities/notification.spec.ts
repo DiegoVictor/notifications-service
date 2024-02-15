@@ -4,7 +4,7 @@ import { Notification } from './notification';
 
 describe('Notification', () => {
   it('should be able to create a notification', async () => {
-    const notification = makeNotification();
+    const notification = makeNotification({ readAt: new Date() });
 
     expect(notification).toBeInstanceOf(Notification);
   });

@@ -12,7 +12,7 @@ services:
   kafka:
     image: bitnami/kafka:3.3
     container_name: kafka
-    restart: always
+    restart: unless-stopped
     depends_on:
       - zookeeper
     environment:

@@ -3,6 +3,7 @@ services:
   zookeeper:
     image: bitnami/zookeeper
     container_name: zookeeper
+    restart: unless-stopped
     ports:
       - 2181:2181
     environment:

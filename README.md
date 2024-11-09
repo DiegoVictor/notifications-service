@@ -1,5 +1,5 @@
 # Notifications Service
-![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/notifications-service?style=flat-square&logo=circleci)
+[![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/notifications-service?style=flat-square&logo=circleci)](https://app.circleci.com/pipelines/github/DiegoVictor/notifications-service)
 ![NestJS](https://img.shields.io/badge/nestjs-9.2.1-E0234E?style=flat-square&logo=nestjs)
 [![eslint](https://img.shields.io/badge/eslint-8.29.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![jest](https://img.shields.io/badge/jest-28.1.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)

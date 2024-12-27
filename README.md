@@ -1,5 +1,8 @@
 # Notifications Service
 [![CircleCI](https://img.shields.io/circleci/build/github/DiegoVictor/notifications-service?style=flat-square&logo=circleci)](https://app.circleci.com/pipelines/github/DiegoVictor/notifications-service)
+[![sqlite3](https://img.shields.io/badge/sqlite-003b57?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org)
+[![prisma](https://img.shields.io/static/v1?label=prisma&message=4.7.1&color=2d3748&logo=prisma&style=flat-square)](https://www.prisma.io)
+[![typescript](https://img.shields.io/badge/typescript-4.9.4-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 ![NestJS](https://img.shields.io/badge/nestjs-9.2.1-E0234E?style=flat-square&logo=nestjs)
 [![eslint](https://img.shields.io/badge/eslint-8.29.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![jest](https://img.shields.io/badge/jest-28.1.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)

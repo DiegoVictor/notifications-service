@@ -9,7 +9,7 @@ describe('Send Notification', () => {
     const payload = {
       category: faker.lorem.word(),
       content,
-      recipientId: faker.datatype.uuid(),
+      recipientId: faker.string.uuid(),
     };
 
     const notificationRepository = new InMemoryNotificationRepository();

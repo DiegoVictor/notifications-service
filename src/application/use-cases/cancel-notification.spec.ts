@@ -28,7 +28,7 @@ describe('Cancel Notification', () => {
 
     const service = new CancelNotification(notificationRepository);
     await expect(async () =>
-      service.execute({ notificationId: faker.datatype.uuid() }),
+      service.execute({ notificationId: faker.string.uuid() }),
     ).rejects.toThrow(NotificationNotFound);
   });
 });

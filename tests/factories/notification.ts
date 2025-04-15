@@ -10,7 +10,7 @@ export function makeNotification(override: Partial<INotification> = {}) {
   const notification = new Notification({
     category: faker.lorem.word(),
     content: new Content(content),
-    recipientId: faker.datatype.uuid(),
+    recipientId: faker.string.uuid(),
     ...override,
   });
 

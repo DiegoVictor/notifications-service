@@ -5,7 +5,7 @@ import { GetRecipientNotifications } from './get-recipient-notifications';
 
 describe('Get Recipient Notifications', () => {
   it('should be able to count recipient notifications', async () => {
-    const recipientId = faker.datatype.uuid();
+    const recipientId = faker.string.uuid();
     const notifications = [
       makeNotification({ recipientId }),
       makeNotification({ recipientId }),

@@ -28,7 +28,7 @@ describe('Read Notification', () => {
 
     const service = new ReadNotification(notificationRepository);
     await expect(async () =>
-      service.execute({ notificationId: faker.datatype.uuid() }),
+      service.execute({ notificationId: faker.string.uuid() }),
     ).rejects.toThrow(NotificationNotFound);
   });
 });

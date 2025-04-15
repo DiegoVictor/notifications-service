@@ -30,9 +30,12 @@ describe('Notification', () => {
   });
 
   it('should be able to unread a notification', async () => {
+    const readAt = faker.date.past();
     const notification = makeNotification({
-      readAt: faker.date.past(),
+      readAt,
     });
+
+    expect(notification.readAt).toStrictEqual(readAt);
 
     notification.unread();
 

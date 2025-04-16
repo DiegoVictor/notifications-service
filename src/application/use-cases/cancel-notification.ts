@@ -13,9 +13,8 @@ export class CancelNotification {
   async execute(request: IRequest): Promise<void> {
     const { notificationId } = request;
 
-    const notification = await this.notificationRepository.findOneById(
-      notificationId,
-    );
+    const notification =
+      await this.notificationRepository.findOneById(notificationId);
 
     if (!notification) {
       throw new NotificationNotFound();

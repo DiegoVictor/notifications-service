@@ -16,9 +16,8 @@ export class CountRecipientNotifications {
   async execute(request: IRequest): Promise<IResponse> {
     const { recipientId } = request;
 
-    const count = await this.notificationRepository.countManyByRecipientId(
-      recipientId,
-    );
+    const count =
+      await this.notificationRepository.countManyByRecipientId(recipientId);
 
     return { count };
   }

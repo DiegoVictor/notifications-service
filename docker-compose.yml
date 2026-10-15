@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   zookeeper:
-    image: bitnami/zookeeper
+    image: soldevelo/zookeeper
     container_name: zookeeper
     restart: unless-stopped
     ports:
@@ -11,7 +11,7 @@ services:
     networks:
       - app_network
   kafka:
-    image: bitnami/kafka:3.3
+    image: soldevelo/kafka:3.3
     container_name: kafka
     restart: unless-stopped
     depends_on:
